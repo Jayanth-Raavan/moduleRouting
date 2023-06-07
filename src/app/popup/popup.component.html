@@ -1,0 +1,57 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Employee Form</h4>
+        <button type="button" class="btn btn-close" aria-label="close" (click)="modal.dismiss('Cross Click')"></button>
+    </div>
+    <div class="modal-body">
+        <form #empform="ngForm" (submit)="SaveEmployee(empform.value)">
+            <div class="mb-3">
+                <label for="">Id</label>
+                <div class="input-group">
+                    <input type="text" name="id" disabled="disabled" class="form-control" #id="ngModel" ngModel>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="">Name</label>
+                <div class="input-group">
+                    <input type="text" name="name" minlength="3" required class="form-control" #name="ngModel" ngModel>
+                </div>
+                <span class="text-danger" *ngIf="name.invalid && name.touched">Name must be atleast 3 characters</span>
+            </div>
+            <div class="mb-3">
+                <label for="">Email</label>
+                <div class="input-group">
+                    <input type="text" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" name="email" class="form-control" #email="ngModel" ngModel>
+                </div>
+                <span class="text-danger" *ngIf="email.invalid && email.touched">Please Enter valid Email address</span>
+            </div>
+            <div class="mb-3">
+                <label for="">Phone</label>
+                <div class="input-group">
+                    <input type="text" name="phone" class="form-control" #phone="ngModel" ngModel>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="">Designation</label>
+                <div class="input-group">
+                    <select name="designation" class="form-control" #designation="ngModel" ngModel>
+                        <option value="">Select Designation</option>
+                        <option value="developer">Developer</option>
+                        <option value="qa">QA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                
+                <div class="input-group">
+                    <button type="submit" class="btn btn-primary" [disabled]="empform.invalid">Save Pop</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+    </div>
+</ng-template>
+
+<button class="btn btn-primary" (click)="open(content)">Add New</button>
+

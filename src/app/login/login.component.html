@@ -1,0 +1,15 @@
+<div class="row gx-0">
+    <div class="col-lg-6 offset-lg-3">
+        <div class="form-group">
+            <label>User Name :</label>
+            <input type="text" #name class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Role :</label>
+            <input type="text" #role class="form-control">
+        </div>
+        <div class="form-group mt-3">
+            <a class="btn btn-primary " (click)="Login(name.value, role.value)">Login</a>
+        </div>
+    </div>
+</div>

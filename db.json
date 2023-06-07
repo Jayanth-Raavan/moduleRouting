@@ -1,0 +1,39 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sebasgfgtian",
+      "email": "sebastfgfian@codingthesmartway.com",
+      "phone": 8798416644,
+      "designation": "Developer"
+    },
+    {
+      "id": 2,
+      "name": "gayle",
+      "email": "gayle@codingthesmartway.com",
+      "phone": 8756412458,
+      "designation": "Networking"
+    },
+    {
+      "id": 3,
+      "name": "chris",
+      "email": "chris@codingthesmartway.com",
+      "phone": 9845671596,
+      "designation": "QA"
+    },
+    {
+      "id": 4,
+      "name": "Jayanth",
+      "email": "jayanthraavan@gmail.com",
+      "phone": "9182896193",
+      "designation": "developer"
+    },
+    {
+      "name": "vcdvfgfgb",
+      "email": "fgbff@gmail.com",
+      "phone": "452727",
+      "designation": "developer",
+      "id": 5
+    }
+  ]
+}

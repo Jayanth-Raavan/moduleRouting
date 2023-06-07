@@ -1,0 +1,28 @@
+<h2 align="center" class="text-success">Add User</h2>
+
+<app-modal></app-modal>
+
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Designation</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let obj of empObj">
+                <td>{{obj.id}}</td>
+                <td>{{obj.name}}</td>
+                <td>{{obj.email}}</td>
+                <td>{{obj.phone}}</td>
+                <td>{{obj.designation}}</td>
+                <td><a class="btn btn-info" (click)="functionEdit(obj.id)">Edit</a> &nbsp; &nbsp;<a class="btn btn-danger" (click)="functionDelete(obj.id)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
